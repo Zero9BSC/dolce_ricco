@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Fiolex Girls';
+    src: url('ruta/a/la/fuente/FiolexGirls-Regular.ttf');
+}
+
+.parrafo1 {
+    font-family: 'Fiolex Girls';
+    src: url('./fonts/Filxgirl.TTF');
+}
+
+h1 {
+    font-family: 'Fiolex Girls', cursive;
+}
