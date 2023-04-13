@@ -11,3 +11,167 @@
 h1 {
     font-family: 'Fiolex Girls', cursive;
 }
+
+.text_right {
+    text-align: right;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(230,230,230);
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.navbar img {
+    height: 50px;
+    margin-right: 8px;
+}
+
+.navbar h1 {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    flex-grow: 1;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.navbar .links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.navbar a:hover {
+    background-color: #ff9191;
+}
+
+.container{
+    width: 90%;
+    max-width: 1000px; /*ancho máximo de la página*/
+    margin: 20px auto; /*auto permite centrar nuestra página en forma horizontal*/
+    display: grid;
+    gap: 20px; /*nos ahorramos tenes que poner márgenes entre los elementos*/
+
+    /*3 columnas: content (con 2 widgets) + sidebar*/
+    grid-template-columns: repeat(3,1fr);
+
+    /*4 filas: header, content, widgets, footer*/
+    grid-template-rows: repeat(5, auto);
+
+    grid-template-areas: "navbar navbar navbar"
+                         "header header header"
+                         "content content sidebar"
+                         "widget-1 widget-2 sidebar"
+                         "footer footer footer";
+}
+
+.container > div,
+.container .navbar{
+    padding: 8px;
+    /* position: sticky-top; */
+}
+.container .header,
+.container .content,
+.container .sidebar,
+.container .footer {
+    padding: 100px;
+    /* border-radius: 4px; */
+}
+
+.container .navbar{
+    background: darkmagenta;
+    color: white;
+    grid-area: navbar;
+}
+
+.container .header{
+    background: pink;
+    color: #fff;
+    grid-area: header; 
+}
+
+.container .content{
+    background: #fff;
+    grid-area: content; 
+}
+
+.container .sidebar{
+    background: orange;
+    /*utilizamos flexbox para alinear el content*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: sidebar; 
+}
+
+.container .widget-1,
+.container .widget-2{
+    background: lightskyblue;
+    color: #000;
+    height: 100px;
+    /*utilizamos flexbox para alinear el content*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .widget-1{
+    grid-area: widget-1; 
+}
+
+.container .widget-2{
+    grid-area: widget-2; 
+}
+
+.container .footer{
+    background: darkblue;
+    color: #fff;
+    grid-area: footer; 
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        grid-template-areas: "navbar navbar navbar"
+                             "header header header"
+                             "content content content"
+                             "sidebar sidebar sidebar"
+                             "widget-1 widget-1 widget-2"
+                             "footer footer footer";
+    }
+}
+
+@media screen and (max-width: 450px){
+    .container{
+        grid-template-areas: "navbar navbar navbar"
+                             "header header header"
+                             "content content content"
+                             "widget-1 widget-1 widget-1"
+                             "widget-2 widget-2 widget-2"
+                             "sidebar sidebar sidebar"
+                             "footer footer footer";
+    }
+}
