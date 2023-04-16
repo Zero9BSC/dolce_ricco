@@ -1,15 +1,17 @@
 @font-face {
-    font-family: 'Fiolex Girls';
-    src: url('ruta/a/la/fuente/FiolexGirls-Regular.ttf');
+    font-family: "Fiolex Girls";
+    src: url("ruta/a/la/fuente/FiolexGirls-Regular.ttf");
 }
 
 .parrafo1 {
-    font-family: 'Fiolex Girls';
-    src: url('./fonts/Filxgirl.TTF');
+    font-family: "Fiolex Girls";
+    src: url("./fonts/Filxgirl.TTF");
 }
 
-h1 {
-    font-family: 'Fiolex Girls', cursive;
+h1,
+h2,
+h3 {
+    font-family: "Fiolex Girls", cursive;
 }
 
 .text_right {
@@ -22,11 +24,12 @@ h1 {
 }
 
 body {
-    background: rgb(247, 215, 247);
+    background: rgb(255, 255, 255);
     color: #000;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
+/* Barra de Navegacion */
 .navbar {
     position: fixed;
     top: 0;
@@ -91,13 +94,14 @@ body {
     /*4 filas: header, content, widgets, footer*/
     grid-template-rows: repeat(7, auto);
 
-    grid-template-areas: "navbar navbar navbar navbar navbar"
-                         "header header header header header"
-                         "header header header header header"
-                         "financing financing financing financing financing"
-                         "content content content content sidebar"
-                         "widget-1 widget-1 widget-2 widget-2 sidebar"
-                         "footer footer footer footer footer";
+    grid-template-areas:
+        "navbar navbar navbar navbar navbar"
+        "header header header header sidebar"
+        "content content content content sidebar"
+        "content content content content sidebar"
+        "financing financing financing financing sidebar"
+        "widget-1 widget-1 widget-2 widget-2 sidebar"
+        "footer footer footer footer footer";
 }
 
 .container>div,
@@ -107,6 +111,7 @@ body {
 
 .container .header,
 .container .content,
+.container .financing,
 .container .sidebar,
 .container .footer {
     padding: 10px;
@@ -120,11 +125,11 @@ body {
 }
 
 .container .header {
-    background: pink;
+    /* background: pink; */
     color: #fff;
     grid-area: header;
     /* padding: 80px 50px 0 50px; */
-    margin: 60px 0 0 0;
+    margin-top: 60px;
 }
 
 .container .content {
@@ -132,13 +137,19 @@ body {
     grid-area: content;
 }
 
+.container .financing {
+    grid-area: financing;
+}
+
 .container .sidebar {
     background: orange;
     /*utilizamos flexbox para alinear el content*/
     display: flex;
     align-items: center;
+    margin-top: 60px;
     justify-content: center;
     grid-area: sidebar;
+    max-width: 100%;
 }
 
 .container .widget-1,
@@ -168,74 +179,101 @@ body {
 
 @media screen and (max-width: 768px) {
     .container {
-        grid-template-areas: "navbar navbar navbar navbar navbar"
-                             "header header header header header"
-                             "financing financing financing financing financing"
-                             "content content content content sidebar"
-                             "sidebar sidebar sidebar sidebar sidebar"
-                             "widget-1 widget-1 widget-1 widget-2 widget-2"
-                             "footer footer footer footer footer";
+        width: 768px;
+        grid-template-areas:
+            "navbar navbar navbar navbar navbar"
+            "header header header header header"
+            "financing financing financing financing financing"
+            "content content content content sidebar"
+            "content content content content sidebar"
+            "widget-1 widget-1 widget-1 widget-2 widget-2"
+            "footer footer footer footer footer";
     }
 }
 
 @media screen and (max-width: 450px) {
     .container {
-        grid-template-areas: "navbar navbar navbar"
-            "header header header"
-            "content content content"
-            "widget-1 widget-1 widget-1"
-            "widget-2 widget-2 widget-2"
-            "sidebar sidebar sidebar"
-            "footer footer footer";
+        width: 450px;
+        grid-template-areas:
+            "navbar navbar navbar navbar navbar"
+            "header header header header header"
+            "content content content content content"
+            "financing financing financing financing financing"
+            "sidebar sidebar sidebar sidebar sidebar"
+            "widget-1 widget-1 widget-1 widget-2 widget-2"
+            "footer footer footer footer footer";
     }
 }
 
-/* Estilos para la imagen grande */
-.imagen-grande {
-    float: left;
-    width: 60%;
-    margin-right: 20px;
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
 }
 
-.imagen-grande img {
+.image-1 {
+    grid-column: 1 / span 2;
+    position: relative;
+}
+
+.image-2 {
+    position: relative;
     max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
-/* Estilos para las imágenes chicas */
-.imagenes-chicas {
-    float: right;
-    width: 30%;
-}
-
-.imagen-chica {
+.image-3 {
     position: relative;
-    margin-bottom: 20px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
 }
 
-.imagen-chica img {
-    max-width: 100%;
+.zoomable {
+    width: 100%;
     height: auto;
     transition: transform 0.3s;
+    position: relative;
 }
 
-.descripcion {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    font-size: 14px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.imagen-chica:hover img {
+.zoomable:hover {
     transform: scale(1.1);
 }
 
-.imagen-chica:hover .descripcion {
+.description {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.zoomable:hover+.description {
+    bottom: 10px;
     opacity: 1;
+}
+
+@media (max-width: 767px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .image-1 {
+        grid-column: 1;
+    }
+
+    .image-2 {
+        grid-column: 1;
+    }
+
+    .image-3 {
+        grid-column: 1;
+    }
 }
