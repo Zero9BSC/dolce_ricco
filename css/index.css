@@ -30,7 +30,7 @@ body {
 }
 
 /* Barra de Navegacion */
-.navbar {
+/* .navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -76,11 +76,136 @@ body {
 
 .navbar a:hover {
     background-color: #ff9191;
+} */
+
+.navbar-toggle {
+    border: none;
+    background-color: transparent;
+    margin-top: 15px;
 }
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin-bottom: 3px;
+    position: relative;
+    background-color: #333;
+}
+
+.navbar-toggle .icon-bar:nth-child(2) {
+    margin-top: 3px;
+}
+
+.navbar-collapse {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .navbar-collapse {
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        z-index: 999;
+    }
+
+    .navbar-collapse li {
+        display: block;
+        text-align: center;
+    }
+
+    .navbar-collapse li a {
+        display: inline-block;
+        padding: 10px;
+        font-size: 18px;
+        color: #fff;
+    }
+
+    .navbar-brand {
+        text-align: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    .navbar-brand img {
+        margin-top: -5px;
+        /* ajusta la posición vertical según sea necesario */
+        max-height: 80px;
+        /* ajusta el tamaño del logo en dispositivos pequeños */
+    }
+
+    .navbar-brand span {
+        display: block;
+        font-size: 12px;
+        /* ajusta el tamaño del texto en dispositivos pequeños */
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-collapse {
+        display: block !important;
+        height: auto !important;
+        padding-bottom: 0;
+        overflow: visible !important;
+        visibility: visible !important;
+    }
+
+    .navbar-collapse.in {
+        overflow-y: visible;
+    }
+
+    .navbar-fixed-top .navbar-collapse,
+    .navbar-static-top .navbar-collapse,
+    .navbar-fixed-bottom .navbar-collapse {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .navbar-brand {
+        float: left;
+        margin-right: 15px;
+    }
+
+    .navbar-brand img {
+        margin-top: -5px;
+        /* ajusta la posición vertical según sea necesario */
+        max-height: 70px;
+        /* ajusta el tamaño del logo en dispositivos grandes */
+    }
+
+    .navbar-brand span {
+        display: inline-block;
+        font-size: 16px;
+        /* ajusta el tamaño del texto en dispositivos grandes */
+        margin-left: 10px;
+        /* ajusta la separación entre la imagen y el texto */
+        vertical-align: middle;
+    }
+
+    .navbar-nav {
+        float: right;
+        margin: 0;
+    }
+
+    .navbar-nav>li {
+        float: left;
+    }
+
+    .navbar-nav>li>a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        line-height: 20px;
+    }
+}
+
+/* Fin Barra de navegacion */
 
 .container {
     width: 90%;
-    max-width: 1000px;
+    max-width: 100%;
     /*ancho máximo de la página*/
     margin: 20px auto;
     /*auto permite centrar nuestra página en forma horizontal*/
@@ -275,5 +400,59 @@ body {
 
     .image-3 {
         grid-column: 1;
+    }
+}
+
+.productos-destacados {
+    padding: 50px 0;
+}
+
+.productos-destacados h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.producto {
+    position: relative;
+}
+
+.zoomable {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.zoomable:hover {
+    transform: scale(1.1);
+    filter: blur(5px);
+}
+
+.descripcion {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.zoomable:hover+.descripcion {
+    opacity: 1;
+}
+
+@media (max-width: 767px) {
+    .grid-container {
+        grid-template-columns: 1fr;
     }
 }
