@@ -29,60 +29,21 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-/* Barra de Navegacion */
-/* .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    overflow: hidden;
-    padding: 10px;
-    z-index: 9999;
-}
-
-.navbar img {
-    height: 80px;
-    margin-right: 5px;
-    max-width: 100%;
-}
-
-.navbar h1 {
-    color: #fff;
-    font-size: 60px;
-    margin: 0 10px;
-    flex-grow: 1;
-    text-align: center;
-    margin-left: 10px;
-    max-width: 100%;
-}
-
-.navbar .links {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    max-width: 100%;
-}
-
-.navbar a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    max-width: 100%;
-}
-
-.navbar a:hover {
-    background-color: #ff9191;
-} */
+/* Barra de navegacion */
 
 nav > div > a {
     font-family: "Fiolex Girls";
     src: url("./fonts/Filxgirl.TTF");
     color: white;
     font-size: 48px !important;
+}
+
+.navbar {
+    align-items: center;
+}
+
+.navbar-brand img {
+    border-radius: 100%;
 }
 
 .navbar-toggle {
