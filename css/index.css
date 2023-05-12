@@ -31,7 +31,7 @@ body {
 
 /* Barra de navegacion */
 
-nav > div > a {
+nav > div > h1 {
     font-family: "Fiolex Girls";
     src: url("./fonts/Filxgirl.TTF");
     color: white;
@@ -39,139 +39,84 @@ nav > div > a {
 }
 
 .navbar {
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar-logo {
+    display: flex;
     align-items: center;
 }
 
-.navbar-brand img {
+.navbar-logo img {
+    height: 80px;
     border-radius: 100%;
 }
 
+.navbar-logo h1 {
+    color: #ffffff;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
 .navbar-toggle {
-    border: none;
-    background-color: transparent;
-    margin-top: 15px;
-}
-
-.navbar-toggle .icon-bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    margin-bottom: 3px;
-    position: relative;
-    background-color: #333;
-}
-
-.navbar-toggle .icon-bar:nth-child(2) {
-    margin-top: 3px;
-}
-
-.navbar-collapse {
     display: none;
 }
 
-@media (max-width: 767px) {
-    .navbar-collapse {
-        display: block;
-        position: absolute;
-        margin-top: 20px;
-        top: 50px;
-        left: 0;
-        right: 0;
-        background-color: #333;
-        z-index: 999;
-    }
-
-    .navbar-collapse li {
-        display: block;
-        text-align: center;
-    }
-
-    .navbar-collapse li a {
-        display: inline-block;
-        padding: 10px;
-        font-size: 18px;
-        color: #fff;
-    }
-
-    .navbar-brand {
-        text-align: center;
-        /* margin: -22px; */
-        margin: -23px 0px -6px 50px !important;
-        /* margin-left: 22px;
-        margin-bottom: -5px; */
-        width: 200px;
-    }
-
-    .navbar-brand img {
-        margin-top: 0px;
-        /* ajusta la posición vertical según sea necesario */
-        margin-left: -70px;
-        max-width: 40%;
-        max-height: 80px;
-        /* ajusta el tamaño del logo en dispositivos pequeños */
-    }
-
-    .navbar-brand span {
-        display: block;
-        font-size: 22px;
-        /* ajusta el tamaño del texto en dispositivos pequeños */
-    }
+.navbar-links {
+    display: flex;
+    align-items: center;
 }
 
-@media (min-width: 768px) {
-    .navbar-collapse {
-        display: block !important;
-        height: auto !important;
-        padding-bottom: 0;
-        overflow: visible !important;
-        visibility: visible !important;
+.navbar-links a {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px 20px;
+        z-index: 9999;
     }
 
-    .navbar-collapse.in {
-        overflow-y: visible;
+    .navbar-links.active {
+        display: flex;
+        flex-direction: column;
     }
 
-    .navbar-fixed-top .navbar-collapse,
-    .navbar-static-top .navbar-collapse,
-    .navbar-fixed-bottom .navbar-collapse {
-        padding-right: 15px;
-        padding-left: 15px;
+    .navbar-toggle {
+        display: block;
+        cursor: pointer;
+        align-self: center;
     }
 
-    .navbar-brand {
-        float: left;
-        margin-right: 15px;
-    }
-
-    .navbar-brand img {
-        margin-top: -5px;
-        /* ajusta la posición vertical según sea necesario */
-        max-height: 70px;
-        /* ajusta el tamaño del logo en dispositivos grandes */
-    }
-
-    .navbar-brand span {
-        display: inline-block;
-        font-size: 20px;
-        /* ajusta el tamaño del texto en dispositivos grandes */
-        margin-left: 10px;
-        /* ajusta la separación entre la imagen y el texto */
-        vertical-align: middle;
-    }
-
-    .navbar-nav {
-        float: right;
-        margin: 0;
-    }
-
-    .navbar-nav>li {
-        float: left;
-    }
-
-    .navbar-nav>li>a {
-        padding-top: 15px;
-        padding-bottom: 15px;
-        line-height: 20px;
+    .navbar-toggle span {
+        display: block;
+        width: 30px;
+        height: 5px;
+        background-color: #000000;
+        margin: 5px 0;
+        border-radius: 5px;
     }
 }
 
