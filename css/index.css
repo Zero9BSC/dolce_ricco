@@ -70,16 +70,18 @@ nav > div > h1 {
 
 .navbar-toggle {
     display: none;
+    margin-right: 10px;
 }
 
 .navbar-links {
     display: flex;
     align-items: center;
+    margin-right: 10px;
 }
 
 .navbar-links a {
     color: #000000;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     margin-left: 20px;
     text-decoration: none;
@@ -140,7 +142,7 @@ nav > div > h1 {
 
     grid-template-areas:
         "navbar navbar navbar navbar navbar"
-        "header header header header sidebar"
+        "header header header header header"
         "content content content content sidebar"
         "content content content content sidebar"
         "financing financing financing financing sidebar"
@@ -334,10 +336,10 @@ nav > div > h1 {
     margin-bottom: 20px;
 }
 
-.grid-container {
+.grid-container-productos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
 }
 
 .producto {
