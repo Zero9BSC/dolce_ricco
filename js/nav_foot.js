@@ -1,3 +1,24 @@
+let myNav=`
+            <div class="navbar-logo">
+                <img src="img/logo.png" alt="Logo">
+                <h1>Dolce&Ricco</h1>
+            </div>
+            <div class="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="navbar-links">
+                <a href="/">Inicio</a>
+                <a href="./products.html">Productos</a>
+                <a href="#">Promociones</a>
+                <a href="#">Contacto</a>
+            </div>
+`
+
+document.querySelector("nav").innerHTML=myNav;
+
+
 myFooter=`
             <div class="footer-section">
                 <h4 class="footer-title">Navegación</h4>
@@ -6,7 +27,7 @@ myFooter=`
                         <a class="footer-link" href="/">Inicio</a>
                     </li>
                     <li class="footer-list-item">
-                        <a class="footer-link" href="#">Productos</a>
+                        <a class="footer-link" href="./products.html">Productos</a>
                     </li>
                     <li class="footer-list-item">
                         <a class="footer-link" href="#">Promociones</a>
