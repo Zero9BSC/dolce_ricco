@@ -11,7 +11,7 @@ let myNav=`
             <div class="navbar-links">
                 <a href="/">Inicio</a>
                 <a href="./products.html">Productos</a>
-                <a href="#">Promociones</a>
+                <a href="./promotions.html">Promociones</a>
                 <a href="#">Contacto</a>
             </div>
 `
@@ -30,7 +30,7 @@ myFooter=`
                         <a class="footer-link" href="./products.html">Productos</a>
                     </li>
                     <li class="footer-list-item">
-                        <a class="footer-link" href="#">Promociones</a>
+                        <a class="footer-link" href="./promotions.html">Promociones</a>
                     </li>
                     <li class="footer-list-item">
                         <a class="footer-link" href="#">Contacto</a>

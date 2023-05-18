@@ -5,7 +5,7 @@ let products_data = [
     "name": "Tarta de Gelatina sabor Frutilla",
     "description": "Masa sable con crema shantilly y gelatina sabor frutilla",
     "price": "Precio mes de Mayo $2500 (28cmm)",
-    "img": "#",
+    "img": "./img/products/tarta_gelatina.jpg",
     "measures": "26cm y 28cm"
     },
     {
@@ -13,7 +13,7 @@ let products_data = [
     "name": "Tarta Lemonpie",
     "description": "Masa sable con crema de limon y merengue swizo",
     "price": "Precio mes de Mayo $2500 (28cmm)",
-    "img": "#",
+    "img": "./img/products/tarta_lemonpie.jpg",
     "measures": "26cm y 28cm"
     },
     {
@@ -21,7 +21,7 @@ let products_data = [
     "name": "Tarta Cabsha",
     "description": "Masa sable con dulce de leche y ganache de chocolate semiamargo",
     "price": "Precio mes de Mayo $2500 (28cmm)",
-    "img": "#",
+    "img": "./img/products/tarta_cabsha.jpg",
     "measures": "26cm y 28cm"
     },
     {
@@ -29,7 +29,7 @@ let products_data = [
     "name": "Tarta Banana Slpit",
     "description": "Masa sable con dulce de leche, banana, crema shantilly y hilos de chocolate semiamargo",
     "price": "Precio mes de Mayo $2500 (28cmm)",
-    "img": "#",
+    "img": "./img/products/tarta_bananasplit.jpg",
     "measures": "26cm y 28cm"
     },
     {
@@ -37,7 +37,15 @@ let products_data = [
     "name": "Tarta de Duraznos",
     "description": "Masa sable, crema shantilly, duraznos en rodajas, con una cobertura de gelatina sabor durazno",
     "price": "Precio mes de Mayo $2500 (28cmm)",
-    "img": "#",
+    "img": "./img/products/tarta_durazno.jpg",
+    "measures": "26cm y 28cm"
+    },
+    {
+    "id": 5,
+    "name": "Tarta de Manzana",
+    "description": "Masa sable, manzana gratinada y cobertura de maza",
+    "price": "Precio mes de Mayo $2500 (28cmm)",
+    "img": "./img/products/tarta_manzana.jpg",
     "measures": "26cm y 28cm"
     },
     {
@@ -45,7 +53,7 @@ let products_data = [
     "name": "Torta Matera",
     "description": "Bizcochuelo de Limon con lineas de crema pastelera bañada en almibar y coco rallado",
     "price": "Precio mes de Mayo $1500 (26cmm)",
-    "img": "#",
+    "img": "./img/products/torta_matera.jpg",
     "measures": "20cm, 24cm y 26cm"
     },
     {
@@ -53,7 +61,7 @@ let products_data = [
     "name": "Alfajores de Maicena",
     "description": "",
     "price": "Precio mes de Mayo $1500 la docena",
-    "img": "#",
+    "img": "./img/products/alfajores_maicena.jpg",
     "measures": ""
     },
     {
@@ -61,7 +69,7 @@ let products_data = [
     "name": "Budin de chocolate con arandanos",
     "description": "",
     "price": "Precio mes de Mayo $1500",
-    "img": "#",
+    "img": "./img/products/budin_chocolate_arandanos.jpg",
     "measures": "500gr"
     },
     {
@@ -69,7 +77,7 @@ let products_data = [
     "name": "Budin de banan con dulce de leche",
     "description": "",
     "price": "Precio mes de Mayo $1500",
-    "img": "#",
+    "img": "./img/products/budin_banana_dulcedeleche.jpg",
     "measures": "500gr"
     },
     {
@@ -77,15 +85,55 @@ let products_data = [
     "name": "Budin de vainilla con Nueces",
     "description": "",
     "price": "Precio mes de Mayo $1500",
-    "img": "#",
+    "img": "./img/products/budin_vainilla_nueces.jpg",
     "measures": "500gr"
     },
     {
     "id": 11,
-    "name": "Torta Matera",
-    "description": "Bizcochuelo de Limon con lineas de crema pastelera bañada en almibar y coco rallado",
-    "price": "Precio mes de Mayo $1500 (26cmm)",
-    "img": "#",
-    "measures": "20cm, 24cm y 26cm"
+    "name": "Torta Personalizada",
+    "description": "Bizcochuelo sabor ",
+    "price": "Precio mes de Mayo $3000 (x Kilo)",
+    "img": "./img/products/torta_personalizada.jpg",
+    "measures": "A medida"
+    },
+    {
+    "id": 11,
+    "name": "Mini Torta Personalizada",
+    "description": "Bizcochuelo sabor ",
+    "price": "Precio mes de Mayo $3000 (x Kilo)",
+    "img": "./img/products/mini_torta.jpg",
+    "measures": "Peso aproximado 1 Kilo"
+    },
+]
+
+
+let promotions_data = [
+    {
+    "id": 1,
+    "img": "./img/promotions/mesa_dulce.jpg",
+    "title": "Mesa Dulce!",
+    "description": "Mesa dulce completa que contiene Pops de Chocolate, Cakeis etc jaja",
+    "price": "Precio: $150.000 a re caro"
+    },
+    {
+    "id": 2,
+    "img": "./img/promotions/dia_de_las_madres_2023.jpg",
+    "title": "Mesa Dulce!",
+    "description": "Mesa dulce completa que contiene Pops de Chocolate, Cakeis etc jaja",
+    "price": "Precio: $150.000 a re caro"
+    },
+    {
+    "id": 3,
+    "img": "./img/promotions/dia_del_padre_2023.jpg",
+    "title": "Mesa Dulce!",
+    "description": "Mesa dulce completa que contiene Pops de Chocolate, Cakeis etc jaja",
+    "price": "Precio: $150.000 a re caro"
+    },
+    {
+    "id": 4,
+    "img": "./img/promotions/dia_del_niño_2023.jpg",
+    "title": "Mesa Dulce!",
+    "description": "Mesa dulce completa que contiene Pops de Chocolate, Cakeis etc jaja",
+    "price": "Precio: $150.000 a re caro"
     },
 ]
