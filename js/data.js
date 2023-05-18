@@ -112,28 +112,28 @@ let promotions_data = [
     "id": 1,
     "img": "./img/promotions/mesa_dulce.jpg",
     "title": "Mesa Dulce!",
-    "description": "Mesa dulce completa que contiene Pops de Chocolate, Cakeis etc jaja",
-    "price": "Precio: $150.000 a re caro"
+    "description": "Mesa dulce completa que contiene Pops de Chocolate, Cupcakes etc.",
+    "price": "Precio: $40.000"
     },
     {
     "id": 2,
     "img": "./img/promotions/dia_de_las_madres_2023.jpg",
-    "title": "Mesa Dulce!",
-    "description": "Mesa dulce completa que contiene Pops de Chocolate, Cakeis etc jaja",
-    "price": "Precio: $150.000 a re caro"
+    "title": "Dia de la Madre!",
+    "description": "Mini torta, bizcohuelo de Vainilla/Chocolate, personaje a eleccion.",
+    "price": "Precio: $4500"
     },
     {
     "id": 3,
     "img": "./img/promotions/dia_del_padre_2023.jpg",
-    "title": "Mesa Dulce!",
-    "description": "Mesa dulce completa que contiene Pops de Chocolate, Cakeis etc jaja",
-    "price": "Precio: $150.000 a re caro"
+    "title": "Dia del Padre!",
+    "description": "Mini Tarta de gelatina, Mini lemonpie, Mini tarta bombon, 1 alfajor, 1 chocolate, 2 alfajores de maizena.",
+    "price": "Precio: $2000"
     },
     {
     "id": 4,
     "img": "./img/promotions/dia_del_niño_2023.jpg",
-    "title": "Mesa Dulce!",
-    "description": "Mesa dulce completa que contiene Pops de Chocolate, Cakeis etc jaja",
-    "price": "Precio: $150.000 a re caro"
+    "title": "Dia del Niño!",
+    "description": "Micro Torta, 2 cupcake, mini tarta de gelatina, 1 alfajor de maizena, 1 bombon, 1 paleta de chocolate.",
+    "price": "Precio: $5000"
     },
 ]
