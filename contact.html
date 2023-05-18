@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Dolce&Ricco - Contacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300&family=Inter:wght@200&family=Mulish:wght@200;400&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <!-- Script barra de navegacion -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/contact.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <!-- Contenido de la barra de navegación -->
+        </nav>
+
+        <header class="header">
+
+        </header>
+
+        <main class="content">
+            <div>
+                <h1>Deja tu Consulta!</h1>
+
+                <form id="contactForm" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name"><i class="fa fa-user"></i> Nombre completo:</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"><i class="fa fa-envelope"></i> Correo electrónico:</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message"><i class="fa fa-comment"></i> Mensaje:</label>
+                        <textarea id="message" name="message" class="form-control" required></textarea>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn-submit"><i class="fa fa-paper-plane"></i> Enviar</button>
+                    </div>
+                </form>
+
+                <div id="successMsg"></div>
+            </div>
+
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        </main>
+
+        <section class="sidebar">
+
+        </section>
+
+        <section class="financing">
+
+        </section>
+
+        <footer class="footer">
+            <!-- Contenido del pie de página -->
+        </footer>
+    </div>
+
+    <script src="./js/nav_foot.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+
+</html>

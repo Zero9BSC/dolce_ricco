@@ -1,0 +1,370 @@
+@font-face {
+    font-family: "Fiolex Girls";
+    src: url("./fonts/Filxgirl.TTF");
+}
+
+.parrafo1 {
+    font-family: "Fiolex Girls";
+    src: url("./fonts/Filxgirl.TTF");
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Fiolex Girls", cursive;
+}
+
+.text_right {
+    text-align: right;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(255, 255, 255);
+    color: #000;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Barra de navegacion */
+
+nav>div>h1 {
+    font-family: "Fiolex Girls";
+    src: url("./fonts/Filxgirl.TTF");
+    color: white;
+    font-size: 48px !important;
+}
+
+.navbar {
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 80px;
+    border-radius: 100%;
+}
+
+.navbar-logo h1 {
+    color: #ffffff;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.navbar-toggle {
+    display: none;
+    margin-right: 10px;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.navbar-links a {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px 20px;
+        z-index: 9999;
+    }
+
+    .navbar-links.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-toggle {
+        display: block;
+        cursor: pointer;
+        align-self: center;
+    }
+
+    .navbar-toggle span {
+        display: block;
+        width: 30px;
+        height: 5px;
+        background-color: #000000;
+        margin: 5px 0;
+        border-radius: 5px;
+    }
+}
+
+/* Fin Barra de navegacion */
+/* Enmaquetado del contenido con Grid y Flexbox */
+.container {
+    width: 90%;
+    max-width: 100%;
+    /*ancho máximo de la página*/
+    margin: 20px auto;
+    /*auto permite centrar nuestra página en forma horizontal*/
+    display: grid;
+    gap: 20px;
+    /*nos ahorramos de tener que poner márgenes entre los elementos*/
+
+    /*3 columnas: content (con 2 widgets) + sidebar*/
+    grid-template-columns: repeat(5, 1fr);
+
+    /*4 filas: header, content, widgets, footer*/
+    grid-template-rows: repeat(7, auto);
+
+    grid-template-areas:
+        "navbar navbar navbar navbar navbar"
+        "header header header header header"
+        "content content content content content"
+        "content content content content content"
+        "financing financing financing financing financing"
+        "widget-1 widget-1 widget-2 widget-2 widget-2"
+        "footer footer footer footer footer";
+}
+
+.container>div,
+.container .navbar {
+    padding: 8px;
+}
+
+.container .header,
+.container .content,
+.container .financing,
+.container .sidebar,
+.container .footer {
+    padding: 10px;
+    /* border-radius: 4px; */
+}
+
+.container .navbar {
+    background: rgb(211, 4, 211);
+    color: white;
+    grid-area: navbar;
+}
+
+.container .header {
+    /* background: pink; */
+    color: #fff;
+    grid-area: header;
+    /* padding: 80px 50px 0 50px; */
+    margin-top: 60px;
+}
+
+.container .content {
+    background: #fff;
+    grid-area: content;
+}
+
+.container .financing {
+    grid-area: financing;
+}
+
+.container .sidebar {
+    background: rgb(247, 175, 250);
+    /*Utilizamos flexbox para alinear el content*/
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    justify-content: center;
+    grid-area: sidebar;
+    max-width: 100%;
+}
+
+.container .widget-1,
+.container .widget-2 {
+    background: lightskyblue;
+    color: #000;
+    height: 100px;
+    /*utilizamos flexbox para alinear el content*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .widget-1 {
+    grid-area: widget-1;
+}
+
+.container .widget-2 {
+    grid-area: widget-2;
+}
+
+.container .footer {
+    background: rgb(220, 183, 255);
+    color: #fff;
+    grid-area: footer;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 768px;
+        grid-template-areas:
+            "navbar navbar navbar navbar navbar"
+            "header header header header header"
+            "financing financing financing financing financing"
+            "content content content content content"
+            "content content content content content"
+            "widget-1 widget-1 widget-1 widget-2 widget-2"
+            "footer footer footer footer footer";
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .container {
+        width: 450px;
+        grid-template-areas:
+            "navbar navbar navbar navbar navbar"
+            "header header header header header"
+            "content content content content content"
+            "content content content content content"
+            "financing financing financing financing financing"
+            "widget-1 widget-1 widget-1 widget-2 widget-2"
+            "footer footer footer footer footer";
+    }
+}
+
+/* Estilos del formulario de contacto */
+
+.contact-form {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+.contact-form .success-message {
+    color: #4caf50;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.contact-form .error-message {
+    color: #f44336;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Fin Estilos del formulario de contacto */
+
+
+/* Footer */
+
+.footer {
+    font-family: 'Inter Tight', sans-serif;
+}
+
+.inter-tight {
+    font-family: 'Inter Tight', sans-serif;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.footer-section {
+    flex-basis: 25%;
+    margin-bottom: 20px;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list-item {
+    margin-bottom: 5px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.dev {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.dev h2 {
+    font-size: 24px;
+}
+
+.dev a {
+    color: #333;
+}

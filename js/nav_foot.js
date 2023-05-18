@@ -12,7 +12,7 @@ let myNav=`
                 <a href="/">Inicio</a>
                 <a href="./products.html">Productos</a>
                 <a href="./promotions.html">Promociones</a>
-                <a href="#">Contacto</a>
+                <a href="./contact.html">Contacto</a>
             </div>
 `
 
@@ -33,7 +33,7 @@ myFooter=`
                         <a class="footer-link" href="./promotions.html">Promociones</a>
                     </li>
                     <li class="footer-list-item">
-                        <a class="footer-link" href="#">Contacto</a>
+                        <a class="footer-link" href="./contact.html">Contacto</a>
                     </li>
                 </ul>
             </div>
