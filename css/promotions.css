@@ -143,10 +143,10 @@ nav>div>h1 {
     grid-template-areas:
         "navbar navbar navbar navbar navbar"
         "header header header header header"
-        "content content content content sidebar"
-        "content content content content sidebar"
-        "financing financing financing financing sidebar"
-        "widget-1 widget-1 widget-2 widget-2 sidebar"
+        "content content content content content"
+        "content content content content content"
+        "financing financing financing financing financing"
+        "widget-1 widget-1 widget-2 widget-2 widget-2"
         "footer footer footer footer footer";
 }
 
@@ -230,8 +230,8 @@ nav>div>h1 {
             "navbar navbar navbar navbar navbar"
             "header header header header header"
             "financing financing financing financing financing"
-            "content content content content sidebar"
-            "content content content content sidebar"
+            "content content content content content"
+            "content content content content content"
             "widget-1 widget-1 widget-1 widget-2 widget-2"
             "footer footer footer footer footer";
     }
@@ -244,8 +244,8 @@ nav>div>h1 {
             "navbar navbar navbar navbar navbar"
             "header header header header header"
             "content content content content content"
+            "content content content content content"
             "financing financing financing financing financing"
-            "sidebar sidebar sidebar sidebar sidebar"
             "widget-1 widget-1 widget-1 widget-2 widget-2"
             "footer footer footer footer footer";
     }
