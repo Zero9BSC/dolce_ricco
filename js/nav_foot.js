@@ -51,7 +51,7 @@ myFooter=`
                 <h3>2804-976964</h3>
             </div>
             <div class="footer-section dev">
-                <h2>Dolce&Ricco <h3>made by Jones Franco</h3></h2>
+                <h2>Dolce&Ricco <h3>Web Developer Jones Franco Nicolas</h3></h2>
                 <a href="https://github.com/Zero9BSC">Github Zero9BSC</a>
             </div>
 `
