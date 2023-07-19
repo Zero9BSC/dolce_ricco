@@ -1,0 +1,180 @@
+@font-face {
+    font-family: "Fiolex Girls";
+    src: url("flxgirl.eot?") format("eot"), url("flxgirl.woff") format("woff"), url("flxgirl.ttf") format("truetype"), url("flxgirl.svg#") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+/* Barra de navegacion */
+.container .navbar {
+    background: #F5A2A2;
+    color: white;
+    padding: 3px;
+    grid-area: navbar;
+}
+
+nav>div>h1 {
+    font-family: "Fiolex Girls";
+    color: white;
+    font-size: 40px !important;
+}
+
+/* .navbar-logo h1 {
+    font-family: "Fiolex Girls";
+    font-weight: normal;
+    font-style: normal;
+    color: white;
+    font-size: 40px !important;
+} */
+
+.navbar {
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar.scrolled {
+    position: absolute;
+    top: 50px; /* Altura que queremos dejar al desplazar la página */
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 50px;
+    border-radius: 100%;
+}
+
+.navbar-logo h1 {
+    color: #ffffff;
+    /* font-weight: 600; */
+    margin-left: 10px;
+}
+
+.navbar-toggle {
+    display: none;
+    margin-right: 10px;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.navbar-links a {
+    color: #000000;
+    font-size: 19px;
+    /* font-weight: 500; */
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px 20px;
+        z-index: 9999;
+    }
+
+    .navbar-links.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-toggle {
+        display: block;
+        cursor: pointer;
+        align-self: center;
+    }
+
+    .navbar-toggle span {
+        display: block;
+        width: 30px;
+        height: 5px;
+        background-color: #000000;
+        margin: 5px 0;
+        border-radius: 5px;
+    }
+}
+/* Fin Barra de navegacion */
+
+
+/* Footer */
+.container .footer {
+    background: #805841;
+    color: #fff;
+    padding: 10px;
+    grid-area: footer;
+}
+
+.inter-tight {
+    font-family: 'Inter Tight', sans-serif;
+}
+
+.footer {
+    font-family: 'Inter Tight', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.footer-section {
+    flex-basis: 25%;
+    margin-bottom: 20px;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list-item {
+    margin-bottom: 5px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #fcfcfc;
+}
+
+.dev {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.dev h3 {
+    font-size: 12px;
+}
+
+.dev a {
+    color: #eeecec;
+    font-size: 12px
+}
+/* Fin Footer */

@@ -29,100 +29,6 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-/* Barra de navegacion */
-
-nav>div>h1 {
-    font-family: "Fiolex Girls";
-    src: url("./fonts/Filxgirl.TTF");
-    color: white;
-    font-size: 48px !important;
-}
-
-.navbar {
-    border-radius: 0px 0px 20px 20px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-}
-
-.navbar-logo {
-    display: flex;
-    align-items: center;
-}
-
-.navbar-logo img {
-    height: 80px;
-    border-radius: 100%;
-}
-
-.navbar-logo h1 {
-    color: #ffffff;
-    font-weight: 600;
-    margin-left: 10px;
-}
-
-.navbar-toggle {
-    display: none;
-    margin-right: 10px;
-}
-
-.navbar-links {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-}
-
-.navbar-links a {
-    color: #000000;
-    font-size: 20px;
-    font-weight: 500;
-    margin-left: 20px;
-    text-decoration: none;
-}
-
-@media screen and (max-width: 768px) {
-    .navbar-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #ffffff;
-        border-radius: 20px;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-        padding: 10px 20px;
-        z-index: 9999;
-    }
-
-    .navbar-links.active {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .navbar-toggle {
-        display: block;
-        cursor: pointer;
-        align-self: center;
-    }
-
-    .navbar-toggle span {
-        display: block;
-        width: 30px;
-        height: 5px;
-        background-color: #000000;
-        margin: 5px 0;
-        border-radius: 5px;
-    }
-}
-
-/* Fin Barra de navegacion */
 /* Enmaquetado del contenido con Grid y Flexbox */
 .container {
     width: 90%;
@@ -151,28 +57,14 @@ nav>div>h1 {
 }
 
 .container>div,
-.container .navbar {
-    padding: 8px;
-}
-
 .container .header,
 .container .content,
 .container .financing,
 .container .sidebar,
-.container .footer {
-    padding: 10px;
-    /* border-radius: 4px; */
-}
-
-.container .navbar {
-    background: rgb(211, 4, 211);
-    color: white;
-    grid-area: navbar;
-}
 
 .container .header {
     /* background: pink; */
-    color: #fff;
+    color: #000000;
     grid-area: header;
     /* padding: 80px 50px 0 50px; */
     margin-top: 60px;
@@ -288,64 +180,4 @@ nav>div>h1 {
 
 .promocion .precio {
     font-weight: bold;
-}
-
-
-
-
-/* Footer */
-
-.footer {
-    font-family: 'Inter Tight', sans-serif;
-}
-
-.inter-tight {
-    font-family: 'Inter Tight', sans-serif;
-}
-
-.footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: #f0f0f0;
-    padding: 20px;
-}
-
-.footer-section {
-    flex-basis: 25%;
-    margin-bottom: 20px;
-}
-
-.footer-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.footer-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-list-item {
-    margin-bottom: 5px;
-}
-
-.footer-link {
-    text-decoration: none;
-    color: #333;
-}
-
-.dev {
-    margin-top: 30px;
-    text-align: center;
-}
-
-.dev h2 {
-    font-size: 24px;
-}
-
-.dev a {
-    color: #333;
 }

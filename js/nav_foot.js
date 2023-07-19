@@ -48,10 +48,15 @@ myFooter=`
             </div>
             <div class="footer-section">
                 <h4 class="footer-title">Contacto</h4>
-                <h3>2804-976964</h3>
+                <ul class="footer-list">
+                <li class="footer-list-item">
+                    <a class="footer-link"
+                        href="https://api.whatsapp.com/send?phone=542804976964">2804-976964</a>
+                </li>
+                </ul>
             </div>
             <div class="footer-section dev">
-                <h2>Dolce&Ricco <h3>Web Developer Jones Franco Nicolas</h3></h2>
+                <h3>© 2023 Dolce&Ricco Developed by: Jones Franco Nicolas</h2>
                 <a href="https://github.com/Zero9BSC">Github Zero9BSC</a>
             </div>
 `

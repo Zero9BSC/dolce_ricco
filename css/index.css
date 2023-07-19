@@ -1,17 +1,20 @@
 @font-face {
     font-family: "Fiolex Girls";
-    src: url("./fonts/Filxgirl.TTF");
+    src: url("flxgirl.eot?") format("eot"), 
+            url("flxgirl.woff") format("woff"), 
+            url("flxgirl.ttf") format("truetype"), 
+            url("flxgirl.svg#") format("svg");
+    font-weight: normal;
+    font-style: normal;
 }
-
 .parrafo1 {
     font-family: "Fiolex Girls";
-    src: url("./fonts/Filxgirl.TTF");
 }
 
 h1,
 h2,
 h3 {
-    font-family: "Fiolex Girls", cursive;
+    font-family: "Fiolex Girls";
 }
 
 .text_right {
@@ -24,13 +27,13 @@ h3 {
 }
 
 body {
-    background: rgb(255, 255, 255);
+    background: #fffbfb;
     color: #000;
     font-family: "Roboto", sans-serif;
 }
 
 /* Barra de navegacion */
-nav>div>h1 {
+/* nav>div>h1 {
     font-family: "Fiolex Girls";
     src: url("./fonts/Filxgirl.TTF");
     color: white;
@@ -119,7 +122,7 @@ nav>div>h1 {
         margin: 5px 0;
         border-radius: 5px;
     }
-}
+} */
 /* Fin Barra de navegacion */
 
 /* CSS y Enmaquetado del contenido con Grid y Flexbox */
@@ -150,44 +153,49 @@ nav>div>h1 {
 }
 
 .container>div,
-.container .navbar {
+/* .container .navbar {
     padding: 8px;
-}
+} */
 
-.container .header,
-.container .content,
-.container .financing,
-.container .sidebar,
-.container .footer {
+/* .container .header,
+.container .content, */
+/* .container .financing, */
+/* .container .sidebar, */
+/* .container .footer {
     padding: 10px;
-    /* border-radius: 4px; */
-}
+} */
 
-.container .navbar {
-    background: rgb(211, 4, 211);
+/* .container .navbar {
+    background: #F5A2A2;
     color: white;
     grid-area: navbar;
-}
+} */
 
 .container .header {
     /* background: pink; */
-    color: #fff;
+    color: #000000;
     grid-area: header;
     /* padding: 80px 50px 0 50px; */
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 .container .content {
-    background: #fff;
+    background: #FFD8D8;
     grid-area: content;
 }
 
 .container .financing {
+    justify-content: center;
     grid-area: financing;
 }
 
+.financing img {
+    max-width: 40%;
+}
+
+
 .container .sidebar {
-    background: rgb(247, 175, 250);
+    background: #DCF7F3;
     /*Utilizamos flexbox para alinear el content*/
     display: flex;
     align-items: center;
@@ -199,13 +207,21 @@ nav>div>h1 {
 
 .container .widget-1,
 .container .widget-2 {
-    background: lightskyblue;
+    background: #FFFCDD;
     color: #000;
     height: 150px;
     /*utilizamos flexbox para alinear el content*/
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px;
+}
+
+.widget-1 img,
+.widget-2 img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
 }
 
 .container .widget-1 {
@@ -216,43 +232,44 @@ nav>div>h1 {
     grid-area: widget-2;
 }
 
-.container .footer {
-    background: rgb(220, 183, 255);
+/* .container .footer {
+    background: #805841;
     color: #fff;
     grid-area: footer;
-}
+} */
 
 @media screen and (max-width: 768px) {
     .container {
-        width: 768px;
+        width: 90%;
         grid-template-areas:
             "navbar navbar navbar navbar navbar"
             "header header header header header"
             "financing financing financing financing financing"
             "content content content content sidebar"
-            "content content content content sidebar"
-            "widget-1 widget-1 widget-1 widget-2 widget-2"
+            "widget-1 widget-1 widget-1 widget-1 sidebar"
+            "widget-2 widget-2 widget-2 widget-2 sidebar"
             "footer footer footer footer footer";
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
     .container {
-        width: 450px;
+        width: 90%;
         grid-template-areas:
             "navbar navbar navbar navbar navbar"
             "header header header header header"
             "content content content content content"
             "financing financing financing financing financing"
             "sidebar sidebar sidebar sidebar sidebar"
-            "widget-1 widget-1 widget-1 widget-2 widget-2"
+            "widget-1 widget-1 widget-1 widget-1 widget-1"
+            "widget-2 widget-2 widget-2 widget-2 widget-2"
             "footer footer footer footer footer";
     }
 }
 /* Fin CSS y Enmaquetado del contenido con Grid y Flexbox */
 
 /* Inicio CSS header */
-.grid-container-header {
+/* .grid-container-header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
@@ -261,6 +278,7 @@ nav>div>h1 {
 .image-1 {
     grid-column: 1 / span 2;
     position: relative;
+    
 }
 
 .image-2 {
@@ -323,16 +341,81 @@ nav>div>h1 {
     .image-3 {
         grid-column: 1;
     }
+} */
+.grid-container-header {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Display 3 columns in a row */
+    grid-gap: 20px;
+}
+
+.image-1 {
+    grid-column: 1 / span 2;
+    position: relative;
+    max-height: 300px;
+}
+
+.image-2,
+.image-3 {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    /* Add max-height to control the maximum height of the images */
+    max-height: 300px; /* Adjust this value as needed */
+}
+
+.zoomable {
+    width: 100%;
+    height: 100%; /* Set the height to 100% to maintain the image proportions */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.zoomable:hover {
+    transform: scale(1.1);
+}
+
+.description {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.zoomable:hover+.description {
+    bottom: 10px;
+    opacity: 1;
+}
+
+@media (max-width: 767px) {
+    .grid-container-header {
+        grid-template-columns: repeat(2, 1fr); /* Display 2 columns in a row for smaller screens */
+    }
+
+    /* Adjust the max-height for smaller screens */
+    .image-1,
+    .image-2,
+    .image-3 {
+        max-height: 200px; /* Adjust this value as needed */
+    }
 }
 /* Fin CSS header */
 
-/* Inicio CSS Productos Destacados */
 .grid-container-financing {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
 }
 
+/* Inicio CSS Productos Destacados */
 .productos-destacados {
     padding: 5px 0;
 }
@@ -402,7 +485,7 @@ nav>div>h1 {
 
 /* Footer */
 
-.footer {
+/* .footer {
     font-family: 'Inter Tight', sans-serif;
 }
 
@@ -455,4 +538,4 @@ nav>div>h1 {
 
 .dev a {
     color: #333;
-}
+} */
