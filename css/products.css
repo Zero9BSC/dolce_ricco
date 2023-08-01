@@ -14,6 +14,10 @@ h3 {
     font-family: "Fiolex Girls", cursive;
 }
 
+h1 {
+    font-size: 45px;
+}
+
 .text_right {
     text-align: right;
 }
@@ -159,7 +163,7 @@ body {
 }
 
 .product-name {
-    font-size: 20px;
+    font-size: 45px;
     font-weight: bold;
     margin: 0;
 }
