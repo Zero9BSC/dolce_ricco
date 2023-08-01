@@ -14,6 +14,10 @@ h3 {
     font-family: "Fiolex Girls", cursive;
 }
 
+h1 {
+    font-size: 45px;
+}
+
 .text_right {
     text-align: right;
 }
@@ -67,7 +71,8 @@ body {
     color: #000000;
     grid-area: header;
     /* padding: 80px 50px 0 50px; */
-    margin-top: 60px;
+    margin-top: 30px;
+    margin-left: 20px;
 }
 
 .container .content {
@@ -121,7 +126,7 @@ body {
         grid-template-areas:
             "navbar navbar navbar navbar navbar"
             "header header header header header"
-            "financing financing financing financing financing"
+            "content content content content content"
             "content content content content content"
             "content content content content content"
             "widget-1 widget-1 widget-1 widget-2 widget-2"
@@ -176,6 +181,14 @@ body {
 .promocion .descripcion {
     text-align: center;
     margin-bottom: 10px;
+}
+
+.promocion .descripcion h2 {
+    font-size: 35px;
+}
+
+.promocion .descripcion p {
+    font-size: 16px;
 }
 
 .promocion .precio {
