@@ -110,41 +110,48 @@ let products_data = [
 let promotions_data = [
     {
     "id": 1,
+    "img": "./img/promotions/Post_de_instagram_día_de_la_niñez.jpeg",
+    "title": "Torta Kinder!",
+    "description": "Doble relleno: durazno con crema y dulce de leche con oreo. Envio gratis 19 de Agosto.",
+    "price": "Precio: $4.800"
+    },
+    {
+    "id": 2,
     "img": "./img/promotions/box_dia_del_niño_2.jpeg",
     "title": "Box dia del Niño 2023!",
     "description": "",
     "price": "Precio: $4.500"
     },
     {
-    "id": 2,
+    "id": 3,
     "img": "./img/promotions/box_dia_del_niño_1.jpeg",
     "title": "Box dia del Niño 2023!",
     "description": "",
     "price": "Precio: $4.500"
     },
     {
-    "id": 3,
+    "id": 4,
     "img": "./img/promotions/mesa_dulce.jpg",
     "title": "Mesa Dulce!",
     "description": "Mesa dulce completa que contiene Pops de Chocolate, Cupcakes etc.",
     "price": "Precio: A cotizar"
     },
     {
-    "id": 4,
+    "id": 5,
     "img": "./img/promotions/dia_de_las_madres_2023.jpg",
     "title": "Dia de la Madre!",
     "description": "Mini torta, bizcohuelo de Vainilla/Chocolate, personaje a eleccion.",
     "price": "Precio: $4500"
     },
     {
-    "id": 5,
+    "id": 6,
     "img": "./img/promotions/dia_del_padre_2023.jpg",
     "title": "Dia del Padre!",
     "description": "Mini Tarta de gelatina, Mini lemonpie, Mini tarta bombon, 1 alfajor, 1 chocolate, 2 alfajores de maizena.",
     "price": "Precio: $2000"
     },
     {
-    "id": 6,
+    "id": 7,
     "img": "./img/promotions/dia_del_niño_2023.jpg",
     "title": "Dia del Niño!",
     "description": "Micro Torta, 2 cupcake, mini tarta de gelatina, 1 alfajor de maizena, 1 bombon, 1 paleta de chocolate.",
