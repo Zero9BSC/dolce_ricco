@@ -110,7 +110,7 @@ let products_data = [
 let promotions_data = [
     {
     "id": 1,
-    "img": "./img/promotions/Post_de_instagram_día_de_la_niñez.jpeg",
+    "img": "./img/promotions/torta_kinder.png",
     "title": "Torta Kinder!",
     "description": "Doble relleno: durazno con crema y dulce de leche con oreo. Envio gratis 19 de Agosto.",
     "price": "Precio: $4.800"
